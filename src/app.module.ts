@@ -11,7 +11,7 @@ import { MongooseModule } from '@nestjs/mongoose';
     ConfigModule.forRoot({
       isGlobal: true,
     }),
-    MongooseModule.forRoot(process.env.MONGO_DB_URI!),
+    MongooseModule.forRoot(process.env.MONGO_DB_URI!) || 'mongodb+srv://mabbas786official_db_user:v847J09yLkEkOQlg@khan.rsgmlgd.mongodb.net/?appName=khan',
   ],
   controllers: [AppController],
   providers: [AppService],
